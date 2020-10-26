@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Student fee table</title>
+        <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container" style="margin-top:150px;">
+            <h4>Add Student Fee Form</h4>
+            <form action="">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group" >
+                        <label> أختر المرحلة:</label>
+                        <select class="form-control" id="sel1">
+                            <option value="450">KG1</option>
+                            <option value="450">KG2</option>
+                            <option value="585">الصف الأول</option>
+                            <option value="585">الصف الثاني</option>
+                            <option value="585">الصف الثالث</option>
+                            <option value="605">الصف الرابع</option>
+                            <option value="605">الصف الخامس</option>
+                            <option value="605">الصق السادس</option>
+                            <option value="635">الصف السابع</option>
+                            <option value="635">الصف الثامن</option>
+                            <option value="665">الصف التاسع </option>
+                            <option value="715">الصف العاشر </option>
+                            <option value="915">الحادي عشر </option>
+                            <option value="1250">توجيهي </option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                        <label for="">الجنس</label>
+                        <select class="form-control" name="" id="sel2">
+                            <option value="">ذكر</option>
+                            <option value="">أنثى</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                    <label>تأمين المواصلات</label>
+                    <select class="form-control" name="" id="sel3">
+                        <option value="">نعم</option>
+                        <option value="">لا</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                    <label for=""> طريقة الدفع</label>
+                    <select class="form-control" name="" id="sel4">
+                        <option value="">كاش (دفعة كاملة)</option>
+                        <option value="">حوالة بنكية (كاش)</option>
+                        <option value="">دفعات شهرية</option>
+                    </select>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                    <label for="">حالة الطالب</label>
+                    <select class="form-control" name="" id="sel5">
+                        <option value="">ذوي أحتياجات خاصة</option>
+                        <option value="">يتيم</option>
+                    </select>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="form-group">
+                    <label for=""> المدفوعة:</label>
+                    <input type="number" name="" id="price" value="0">
+                </div>
+                </div>
+            </form>
+            <div class="row">
+                <div>
+                    <div class="text-center">
+                    <button class="btn btn-md btn-primary " id="addstdModal">Add Student</button>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 40px;"></div>
+            <div class="row">
+                <div class="col-sm-3">
+                <h4>Student Table</h4>
+                </div>
+                <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="">المبلغ الأجمالي : </label>
+                    <input type="text" id="total" readonly>
+                </div>
+                </div>
+            </div>
+            <div>
+                <table id="table_format" class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th>
+                        <select class="form-control" id="selStage">
+                            <option value="450">All</option>
+                            <option value="450">KG1</option>
+                            <option value="450">KG2</option>
+                            <option value="585">الصف الأول</option>
+                            <option value="585">الصف الثاني</option>
+                            <option value="585">الصف الثالث</option>
+                            <option value="605">الصف الرابع</option>
+                            <option value="605">الصف الخامس</option>
+                            <option value="605">الصق السادس</option>
+                            <option value="635">الصف السابع</option>
+                            <option value="635">الصف الثامن</option>
+                            <option value="665">الصف التاسع </option>
+                            <option value="715">الصف العاشر </option>
+                            <option value="915">الحادي عشر </option>
+                            <option value="1250">توجيهي </option>
+                        </select>        
+                        </th>
+                        <th>
+                        <select class="form-control" name="" id="selSex">
+                            <option value="">All</option>
+                            <option value="">ذكر</option>
+                            <option value="">أنثى</option>
+                        </select>
+                        </th>
+                        <th>
+                        <select class="form-control" name="" id="selTrans">
+                            <option value="">All</option>
+                            <option value="">نعم</option>
+                            <option value="">لا</option>
+                        </select>
+                        </th>
+                        <th> 
+                        <select class="form-control" name="" id="selPayment">
+                            <option value="">All</option>
+                            <option value="">كاش (دفعة كاملة)</option>
+                            <option value="">حوالة بنكية (كاش)</option>
+                            <option value="">دفعات شهرية</option>
+                        </select>
+                        </th>
+                        <th>
+                        <select class="form-control" name="" id="selStatus">
+                            <option value="">All</option>
+                            <option value="">ذوي أحتياجات خاصة</option>
+                            <option value="">يتيم</option>
+                        </select>
+                        </th>
+                        <td><h5> المدفوعة</h5></td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+
+  </html>
